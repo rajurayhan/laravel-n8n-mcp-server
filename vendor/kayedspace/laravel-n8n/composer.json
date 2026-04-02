@@ -1,0 +1,64 @@
+{
+  "name": "kayedspace/laravel-n8n",
+  "description": "A complete, expressive, and fluent Laravel client for the n8n public REST API and Webhooks Triggering.",
+  "type": "library",
+  "keywords": [
+    "n8n",
+    "workflow",
+    "automation",
+    "webhook",
+    "laravel"
+  ],
+  "support": {
+    "issues": "https://github.com/kayedspace/laravel-n8n/issues",
+    "source": "https://github.com/kayedspace/laravel-n8n"
+  },
+  "authors": [
+    {
+      "name": "Ali Youssef Kayed",
+      "email": "3likayed@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "KayedSpace\\N8n\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "KayedSpace\\N8n\\N8nServiceProvider"
+      ],
+      "aliases": {
+        "N8nClient": "KayedSpace\\N8n\\Facades\\N8nClient"
+      }
+    }
+  },
+  "require": {
+    "php": ">=8.2",
+    "illuminate/support": ">=10",
+    "illuminate/http": ">=10"
+  },
+  "require-dev": {
+    "pestphp/pest": "^3.8|^4.0",
+    "pestphp/pest-plugin-laravel": "^3.2|^4.0",
+    "orchestra/testbench": "^10.4",
+    "laravel/pint": "^1.23",
+    "larastan/larastan": "^3.5"
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "scripts": {
+    "pint": "pint",
+    "test": "pest"
+  }
+}
