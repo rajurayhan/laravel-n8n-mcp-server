@@ -12,6 +12,7 @@ namespace Raju\N8nMcp;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Mcp\Facades\Mcp;
 use Raju\N8nMcp\Server\N8nServer;
 
 class N8nMcpServiceProvider extends ServiceProvider
@@ -39,7 +40,7 @@ class N8nMcpServiceProvider extends ServiceProvider
 
         Route::middleware($middleware)
             ->group(function () use ($prefix) {
-                Route::any($prefix, N8nServer::class);
+                Mcp::server(N8nServer::class)->at($prefix);
             });
     }
 }
