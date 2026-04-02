@@ -1,0 +1,38 @@
+{
+    "name": "rajurayhan/laravel-n8n-mcp-server",
+    "description": "n8n MCP server for Laravel — expose n8n workflows, executions, credentials, users, projects, variables, tags, and webhooks as AI-callable MCP tools",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Raju Rayhan",
+            "homepage": "https://github.com/rajurayhan"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^11.0|^12.0",
+        "laravel/mcp": ">=0.1.0",
+        "kayedspace/laravel-n8n": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Raju\\N8nMcp\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Raju\\N8nMcp\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Raju\\N8nMcp\\N8nMcpServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
