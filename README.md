@@ -17,26 +17,15 @@ Built on top of [`kayedspace/laravel-n8n`](https://github.com/kayedspace/laravel
 
 ## Installation
 
-### 1. Add the path repository (local development)
-
-In your Laravel app's `composer.json`:
-
-```json
-{
-    "repositories": [
-        { "type": "path", "url": "../n8n-mcp" }
-    ]
-}
-```
-
-### 2. Require the packages
+### 1. Require the package
 
 ```bash
-composer require rajurayhan/laravel-n8n-mcp-server @dev
-composer require kayedspace/laravel-n8n
+composer require rajurayhan/laravel-n8n-mcp-server
 ```
 
-### 3. Publish the config
+This also installs `kayedspace/laravel-n8n` automatically as a dependency. The service provider is auto-discovered by Laravel — no manual registration needed.
+
+### 2. Publish the config
 
 ```bash
 php artisan vendor:publish --tag=n8n-mcp-config
